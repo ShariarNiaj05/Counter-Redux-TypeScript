@@ -1,13 +1,13 @@
-import { useDispatch, useSelector } from "react-redux";
 import {
   decrement,
   increment,
   incrementByValue,
 } from "./redux/features/CounterSlice";
+import { useAppDispatch, useAppSelector } from "./redux/hook";
 
 function App() {
-  const dispatch = useDispatch();
-  const { count } = useSelector((state) => state.counter);
+  const { count } = useAppSelector((state) => state.counter);
+  const dispatch = useAppDispatch();
 
   return (
     <div className=" h-screen w-full flex items-center justify-center">
