@@ -8,6 +8,7 @@ export interface ICounterState {
 const initialState: ICounterState = {
   count: 0,
 };
+
 const counterSlice = createSlice({
   name: "counter",
   initialState: initialState,
